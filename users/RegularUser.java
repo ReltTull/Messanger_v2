@@ -2,8 +2,8 @@ package users;
 
 import message.TextMessage;
 
-public class RegulatUser extends User{
-    public RegulatUser(String name) {
+public class RegularUser extends User{
+    public RegularUser(String name) {
         super(name, "Regular user");
     }
 
