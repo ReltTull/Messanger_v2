@@ -15,6 +15,10 @@ public abstract class User {
         this.role = role;
     }
 
+    /**
+     * Метод наполнения пустого сообщения
+     * @return
+     */
     TextMessage fillMessage() {
         System.out.println("Enter your message: ");
         Scanner scanner = new Scanner(System.in);
