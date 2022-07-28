@@ -10,8 +10,10 @@ public class Program {
         Holder bob = new Holder("Bob");
         RegularUser dave = new RegularUser("Dave");
         Chat chat = new Chat(bob);
-        ChatMsgOper msgOper = new ChatMsgOper(chat);
+//        ChatMsgOper msgOper = new ChatMsgOper(chat);
         bob.addInChat(dave);
+//        bob.blockMember(dave);
+        chat.showMembers(Chat.members);
 //        chat.showMembers(chat.members);
 //        msgOper.sendTextMsg(bob.fillMessage(), bob);
 //        msgOper.readTextMessages();
