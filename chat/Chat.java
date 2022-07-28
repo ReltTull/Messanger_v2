@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Chat {
     User holder;
     public static ArrayList<User> members = new ArrayList<>();
-    public ArrayList<User> admins = new ArrayList<>();
-    public ArrayList<User> blockedUsers = new ArrayList<>();
+    static public ArrayList<User> admins = new ArrayList<>();
+    static public ArrayList<User> blockedUsers = new ArrayList<>();
     public Chat(User user) {
         this.holder = user;
         members.add(holder);
