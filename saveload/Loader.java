@@ -12,10 +12,19 @@ public class Loader {
     File savePath;
     FilePath workFile = new FilePath();
 
+    /**
+     * Задаём путь к файлу сохранения.
+     * @param path
+     */
     public Loader(String path) {
         this.savePath = new File(path);
     }
 
+    /**
+     * Загрузка сохранения. Первым делом, чистит рабочее хранилище, потом производит запись в хранилище из файла
+     * сохранения, путь к которому указывается в конструкторе класса.
+     * @throws IOException
+     */
     public void loadSave() throws IOException {
         cleanWorkFile();
         FileReader reader = new FileReader(savePath);
@@ -28,6 +37,10 @@ public class Loader {
         writer.close();
     }
 
+    /**
+     * Чистка хранилища сообщений.
+     * @throws IOException
+     */
     void cleanWorkFile () throws IOException {
         FileReader reader = new FileReader(workFile.actualFile);
         Scanner scan = new Scanner(reader);

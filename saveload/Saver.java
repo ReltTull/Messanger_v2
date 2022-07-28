@@ -12,6 +12,11 @@ public class Saver {
     File save;
 
 
+    /**
+     * Задаём путь к местоположению, где будет создан файл сохранение.
+     * @param path
+     * @throws IOException
+     */
     public Saver(String path) throws IOException {
         this.path = path;
         this.save = new File(path);
@@ -20,6 +25,10 @@ public class Saver {
 
     FilePath filePath = new FilePath();
 
+    /**
+     * Запись сохранения из хранилища сообщений.
+     * @throws IOException
+     */
     public void fillSaveFile() throws IOException {
         FileReader reader = new FileReader(filePath.actualFile);
         Scanner scan = new Scanner(reader);
