@@ -13,6 +13,11 @@ public class Holder extends User{
         return super.fillMessage();
     }
     Chat chat = new Chat(Holder.this);
+
+    /**
+     * Холдер может менять состав администраторов, добавляя и удаляя из соответствующего массива.
+     * @param candidate
+     */
     void addAdmin(User candidate) {
         if (chat.members.contains(candidate)) {
             chat.admins.add(candidate);
