@@ -20,6 +20,13 @@ public class ChatMsgOper {
     FilePath path = new FilePath();
 
 
+    /**
+     * Отправка сообщений. Принимает в себя экземпляр TextMessage, который вовзвращается после метода User.fillMessage(),
+     * а также юзера-отправителя для отображения в хранилище сообщений. Так же указывается дата отпрвления.
+     * @param msg - резульатат User.fillMessage().
+     * @param sender - экземпляр, вызывающий fillMessage().
+     * @throws IOException
+     */
     public void sendTextMsg(TextMessage msg, User sender) throws IOException {
         FileWriter fileWriter = new FileWriter(path.actualFile, true);
         if (chat.members.contains(sender)) {
@@ -29,6 +36,11 @@ public class ChatMsgOper {
         }
     }
 
+    /**
+     * Метод чтения хранилища. Так как путь к хранилищу задётся в отдельном классе, сигнатура метода не содержит
+     * входных аргументов.
+     * @throws IOException
+     */
     public void readTextMessages() throws IOException {
         FileReader reader = new FileReader(path.actualFile);
         Scanner scan = new Scanner(reader);
